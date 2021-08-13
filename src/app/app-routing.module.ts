@@ -38,6 +38,10 @@ const routes: Routes = [
     path: 'group-info',
     loadChildren: () => import('./group-info/group-info.module').then( m => m.GroupInfoPageModule)
   },
+  {
+    path: 'conversation-j',
+    loadChildren: () => import('./conversation-j/conversation-j.module').then( m => m.ConversationJPageModule)
+  },
 ];
 @NgModule({
   imports: [

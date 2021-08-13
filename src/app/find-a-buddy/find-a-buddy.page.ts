@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { AlertController } from '@ionic/angular';
+
 
 @Component({
   selector: 'app-find-a-buddy',
@@ -26,8 +28,20 @@ export class FindABuddyPage implements OnInit {
       pfp: "../../assets/pfp3.jpg",
     }
   ]
-  constructor() { }
+  
+  constructor(public alertController: AlertController) { }
+  async presentAlert() {
+    const alert = await this.alertController.create({
+      cssClass: 'my-custom-class',
+      header: 'Disclaimer: Fest-go advises you to first get to know someone, before meeting up with them',
+      buttons: ['OK'],
+    });
 
+    await alert.present();
+
+    const { role } = await alert.onDidDismiss();
+    console.log('onDidDismiss resolved with role', role);
+  }
   ngOnInit() {
   }
 

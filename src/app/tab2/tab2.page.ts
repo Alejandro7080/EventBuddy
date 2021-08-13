@@ -23,7 +23,7 @@ export class Tab3Page {
       img: "../../assets/pfp2.jpeg"
     },
     {
-      name: "George Thompson",
+      name: "Alexander Lopez",
       recentConversation: "Wanna go to another event some other time?",
       img: "../../assets/pfp4.jpg"
     },
